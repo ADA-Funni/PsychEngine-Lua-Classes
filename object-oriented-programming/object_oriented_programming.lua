@@ -24,14 +24,14 @@ YourObject.__index = YourObject
 This function creates your object.
 ]]--
 function YourObject.new(tag, image, x, y, scrollX, scrollY)
-    local self = setmetatable({}, YourObject)
+    local self = setmetatable({}, YourObject);
 
-    self.tag = tag
+    self.tag = tag;
 
-    makeLuaSprite(tag, self.directory .. "/" .. image, x, y)
+    makeLuaSprite(tag, image, x, y)
     setScrollFactor(tag, scrollX, scrollY)
 
-    return self
+    return self;
 end
 
 ---@param front boolean
@@ -44,14 +44,22 @@ end
 
 ---@param property string
 ---@param value any
----@param getProperty boolean
+---@param shouldGetProperty boolean
 --[[
 This function does `setProperty(property, value)` if `shouldGetProperty` is set to `false`.
 ]]--
 function YourObject:accessProperty(property, value, shouldGetProperty)
     if shouldGetProperty == true then
-        getProperty(property)
+        getProperty(self.tag .. "." .. property)
     else
-        setProperty(property, value)
+        setProperty(self.tag .. "." .. property, value)
     end
+end
+
+---@param axes string
+--[[
+This function moves your object to the center of the screen.
+]]--
+function YourObject:screenCenter(axes)
+    screenCenter(self.tag, axes)
 end
