@@ -1,5 +1,7 @@
 # Documentation - Lua "Classes" (Psych Engine)
 
+__*Important disclaimer: this repository was built for use with FNF: Psych Engine.*__
+
 The `lua` folder is basically a LUA library for globals and LUA "classes".
 All of it is run without source code interference in any way.
 
@@ -17,7 +19,7 @@ There's two templates in the `lua` folder, `globals.lua`, and `object-oriented-p
 
 ## How to turn a script into an object
 
--# (Big thanks to @voxov_tired for this part.)
+*Big thanks to @voxov_tired for this part.*
 
 ```lua
 YourObject = {}
@@ -41,7 +43,7 @@ end
 ## Object Oriented Programming
 
 Name `YourObject` the name of your script, only uppercase.
--# Leave `YourObject` blank, it gets filled in when you call `new()`.
+*Leave `YourObject` blank, it gets filled in when you call `new()`.*
 
 (e.g. if your script is called `"object_oriented_programming"`,
 `YourObject` should be named `ObjectOrientedProgramming`.)
