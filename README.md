@@ -15,7 +15,7 @@ Lua "classes" go in `mods/My-Mod/lua/your_script.lua`.
 
 There's two templates in the `lua` folder, `globals.lua`, and `object-oriented-programming/object_oriented_programming.lua`.
 
-### How to turn a script into an object
+## How to turn a script into an object
 
 -# (Big thanks to @voxov_tired for this part.)
 
@@ -38,7 +38,7 @@ function YourObject.new(tag)
 end
 ```
 
-#### Object Oriented Programming
+## Object Oriented Programming
 
 Name `YourObject` the name of your script, only uppercase.
 -# Leave `YourObject` blank, it gets filled in when you call `new()`.
@@ -46,7 +46,7 @@ Name `YourObject` the name of your script, only uppercase.
 (e.g. if your script is called `"object_oriented_programming"`,
 `YourObject` should be named `ObjectOrientedProgramming`.)
 
-##### How to make an object function
+## How to make an object function
 
 You're supposed to format it like this:
 
